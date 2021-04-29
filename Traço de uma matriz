@@ -1,0 +1,17 @@
+n = int(input())
+matriz = []
+for i in range(n):
+    entrada = input().split(" ")
+    entrada = list(map(float, entrada))
+    matriz.append(entrada)
+soma = 0
+for i in range(n):
+    for j in range(n):
+        if i == j:
+            soma += float(matriz[i][j])
+print("tr(A) = ", end="")
+for x in range(n):
+    if x == n-1:
+        print("(%.2f) = %.2f" % (matriz[x][x], soma))
+    else:
+        print("(%.2f) + " % matriz[x][x], end="")
