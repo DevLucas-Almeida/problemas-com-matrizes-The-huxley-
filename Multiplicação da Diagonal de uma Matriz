@@ -1,0 +1,15 @@
+matriz = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
+while True:
+    k = int(input())
+    if k == 0:
+        break
+    for i in range(4):
+        for j in range(4):
+            matriz[j][i] = int(input())
+    for i in range(4):
+        for j in range(4):
+            if i == j:
+                print(f"{matriz[i][j] * k} ", end="")
+            else:
+                print(f"{matriz[i][j]} ", end="")
+        print()
