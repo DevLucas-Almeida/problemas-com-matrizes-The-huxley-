@@ -1,0 +1,36 @@
+n = int(input())
+m = int(input())
+matriz = []
+for i in range(n):
+    linha = []
+    for j in range(m):
+        entrada = int(input())
+        linha.append(entrada)
+    matriz.append(linha)
+if n != m:
+    print("A matriz nao possui traco")
+    for i in range(n):
+        for j in range(m):
+            if j == m - 1:
+                print(matriz[i][j])
+            else:
+                print(matriz[i][j], end=" ")
+else:
+    soma = 0
+    for l in range(n):
+        for c in range(m):
+            if l == c:
+                soma += matriz[l][c]
+    print(soma)
+    cont = n-1
+    soma2 = 0
+    for x in range(n):
+        soma2 += matriz[x][cont]
+        cont -= 1
+    print(soma2)
+    for i in range(n):
+        for j in range(m):
+            if j == m - 1:
+                print(matriz[i][j])
+            else:
+                print(matriz[i][j], end=" ")
