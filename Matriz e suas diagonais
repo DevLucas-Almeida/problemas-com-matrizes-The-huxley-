@@ -1,0 +1,43 @@
+n = int(input())
+matriz = []
+cont = 0
+for i in range(n):
+    linha = []
+    for j in range(n):
+        entrada = cont + 1
+        cont += 1
+        linha.append(entrada)
+    matriz.append(linha)
+print("Matriz:")
+for l in range(n):
+    for c in range(n):
+        if c == n-1:
+            print(f"  {matriz[l][c]}")
+        else:
+            print(f"  {matriz[l][c]}", end="")
+print()
+print("Diagonal Principal:")
+for l in range(n):
+    for c in range(n):
+        if l == c:
+            print(f"  {matriz[l][c]}", end="")
+        else:
+            if c > l:
+                print("", end="")
+            else:
+                print("  ", end=" ")
+    print()
+print()
+print("Diagonal Secundaria:")
+cont = n - 1
+for x in range(n):
+    for i in range(n):
+        if matriz[x][i] == matriz[x][cont]:
+            print(f"  {matriz[x][i]}", end="")
+        else:
+            if matriz[x][i] > matriz[x][cont]:
+                print("", end="")
+            else:
+                print("  ", end=" ")
+    cont -= 1
+    print()
