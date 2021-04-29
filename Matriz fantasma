@@ -1,0 +1,20 @@
+n = int(input())
+matriz = []
+for i in range(n):
+    linha = []
+    cont = 0
+    for j in range(n):
+        entrada = cont + 1
+        cont += 1
+        linha.append(entrada)
+    matriz.append(linha)
+for i in range(n):
+    for j in range(n):
+        if matriz[i][j] != matriz[i][n-1]:
+            if i == j or j > i:
+                print(matriz[i][j], end=" ")
+            else:
+                print(" ", end=" ")
+        else:
+            print(matriz[i][j], end="")
+    print()
