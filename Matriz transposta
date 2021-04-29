@@ -1,0 +1,15 @@
+matriz = []
+lista = input().split(" ")
+for i in range(int(lista[0])):
+    linha = input().split(" ")
+    matriz.append(linha)
+if lista[0] == lista[1]:
+    for i in range(int(lista[0])):
+        for j in range(int(lista[1])):
+            print(matriz[j][i], end=" ")
+        print()
+else:
+    for i in range(int(lista[1])):
+        for j in range(int(lista[0])):
+            print(matriz[j][i], end=" ")
+        print()
